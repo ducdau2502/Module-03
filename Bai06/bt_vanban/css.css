@@ -1,0 +1,12 @@
+p {
+    text-indent: 50px;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+div {
+    width: 800px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
