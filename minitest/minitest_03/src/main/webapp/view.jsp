@@ -26,11 +26,11 @@
 <br>
 <a href="${pageContext.request.contextPath}/products?action=sortDecrease">Sort Decrease</a>
 <br>
-<a href="/products?action=cart">Cart</a>
+<a href="/cart.jsp">Cart</a>
 <c:if test="${requestScope['products'].isEmpty() == true}">
     <h2 style="color: red">Empty</h2>
-</c:if>
-<c:if test="${requestScope['products'].isEmpty() == false}">
+    </c:if>
+    <c:if test="${requestScope['products'].isEmpty() == false}">
     <table>
         <tr>
             <td>ID</td>
@@ -43,7 +43,8 @@
         <c:forEach items="${products}" var="product">
             <tr>
                 <td>${product.getId()}</td>
-                <td><a id="name" style="text-decoration: none" href="/products?action=detail&id=${product.getId()}">${product.getName()}</a></td>
+                <td><a id="name" style="text-decoration: none"
+                       href="/products?action=detail&id=${product.getId()}">${product.getName()}</a></td>
                 <td>${product.getPrice()}</td>
                 <td>${product.getQuantity()}</td>
                 <td>${product.getDescription()}</td>
@@ -53,6 +54,6 @@
             </tr>
         </c:forEach>
     </table>
-</c:if>
+    </c:if>
 </body>
 </html>
